@@ -1,6 +1,6 @@
 # Brieflet: Research Paper Summarization and Analysis
 
-Brieflet is a powerful tool that streamlines the process of understanding and extracting insights from research papers. It combines state-of-the-art machine learning models to automate the classification of research domains and generation of paper summaries, saving you valuable time and effort.
+Brieflet is a powerful tool that streamlines the process of understanding and extracting insights from research papers. It combines machine learning models to automate the classification of research domains and generation of paper summaries.
 
 ## Key Features
 
@@ -34,9 +34,6 @@ Brieflet is a powerful tool that streamlines the process of understanding and ex
    import nltk
    nltk.download('punkt')  # Tokenizer models
    nltk.download('stopwords')  # Stopword lists
-   nltk.download('wordnet')  # WordNet lexical database
-   nltk.download('averaged_perceptron_tagger')  # POS Tagger
-   nltk.download('omw-1.4')  # Multilingual WordNet
    ```
 
 4. **Prepare the Environment**:
