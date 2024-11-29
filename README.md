@@ -84,12 +84,13 @@ brieflet/
 ├── data/
 │   └── pdf_files/
 ├── models/
-│   ├── domain_classifier.pkl
-│   ├── summary_model.pkl
-│   └── domain_keywords.json
-├── src/
 │   ├── domain_classifier.py
-│   └── summary.py
+│   ├── domain_keywords.json
+│   └── domain.log
+├── src/
+│   ├── logs/
+│   └── _init_.py
+|   └── summary.py
 ├── api.py
 ├── requirements.txt
 └── README.md
