@@ -1,0 +1,58 @@
+{
+    "Artificial Intelligence": [
+      "AI", "machine learning", "deep learning", "neural network", "natural language processing",
+      "robotics", "computer vision", "chatbots", "autonomous systems", "reinforcement learning",
+      "generative models", "decision trees", "intelligent systems"
+    ],
+    "Biology": [
+      "DNA", "genome", "biochemistry", "microbiology", "protein", "cell", "neuroscience",
+      "evolution", "genetics", "molecular biology", "enzymes", "bioinformatics",
+      "zoology", "botany", "ecology", "virology", "taxonomy", "biosynthesis"
+    ],
+    "Physics": [
+      "quantum mechanics", "relativity", "thermodynamics", "particle physics", "optics", "cosmology",
+      "fluid dynamics", "electromagnetism", "nuclear physics", "astrophysics", "string theory",
+      "quantum computing", "condensed matter physics", "plasma physics", "wave theory"
+    ],
+    "Chemistry": [
+      "chemical reaction", "organic chemistry", "inorganic chemistry", "biochemistry", "molecules",
+      "polymers", "nanotechnology", "spectroscopy", "catalysts", "analytical chemistry",
+      "physical chemistry", "pharmacology", "electrochemistry", "material chemistry"
+    ],
+    "Mathematics": [
+      "calculus", "algebra", "geometry", "statistics", "topology", "theorems",
+      "number theory", "probability", "differential equations", "graph theory", "linear algebra",
+      "cryptography", "mathematical modeling", "game theory", "optimization", "combinatorics"
+    ],
+    "Computer Science": [
+      "programming", "algorithm", "data structure", "cybersecurity", "cloud computing",
+      "databases", "blockchain", "distributed systems", "networking", "computational theory",
+      "software engineering", "web development", "artificial intelligence ethics"
+    ],
+    "Medicine": [
+      "pharmacology", "anatomy", "pathology", "epidemiology", "oncology", "cardiology",
+      "immunology", "neurology", "surgery", "psychiatry", "virology", "genomics",
+      "dermatology", "pediatrics", "orthopedics", "radiology", "emergency medicine"
+    ],
+    "Engineering": [
+      "mechanical engineering", "civil engineering", "electrical engineering", "robotics",
+      "nanotechnology", "aerospace engineering", "biomedical engineering", "energy systems",
+      "automation", "structural analysis", "systems engineering", "control systems"
+    ],
+    "Environmental Science": [
+      "climate change", "biodiversity", "conservation", "pollution", "sustainability",
+      "ecosystems", "carbon footprint", "environmental monitoring", "renewable energy", "ecology",
+      "water resources", "waste management", "environmental ethics", "geospatial analysis"
+    ],
+    "Economics": [
+      "macroeconomics", "microeconomics", "game theory", "trade", "finance", "economy",
+      "investment", "market analysis", "fiscal policy", "monetary policy", "economic growth",
+      "development economics", "behavioral economics", "public policy", "econometrics"
+    ],
+    "History": [
+      "ancient history", "modern history", "archaeology", "war", "historical analysis",
+      "colonialism", "revolutions", "medieval history", "cultural heritage", "historical artifacts",
+      "world wars", "industrial revolution", "historical texts", "dynasties"
+    ]
+  }
+  

@@ -1,0 +1,18 @@
+2024-11-30 01:24:29,291 - INFO - Initializing ResearchDomainClassifier
+2024-11-30 01:24:29,291 - INFO - Loading domain keywords from: domain_keywords.json
+2024-11-30 01:24:29,292 - INFO - Preparing dataset from PDF files in directory: D:\research_summarizer\data\pdf_files
+2024-11-30 01:24:29,295 - INFO - Extracting text from PDF: D:\research_summarizer\data\pdf_files\Neural Networks from Scratch in Python.pdf
+2024-11-30 01:25:00,844 - INFO - Assigning domain label for file: Neural Networks from Scratch in Python.pdf
+2024-11-30 01:25:00,844 - INFO - Domain 'Artificial Intelligence' assigned based on file name.
+2024-11-30 01:25:00,844 - INFO - Extracting text from PDF: D:\research_summarizer\data\pdf_files\research_paper.pdf
+2024-11-30 01:25:01,008 - INFO - Assigning domain label for file: research_paper.pdf
+2024-11-30 01:25:01,009 - INFO - Domain 'Artificial Intelligence' assigned based on file content.
+2024-11-30 01:25:01,103 - INFO - Training the classifier
+2024-11-30 01:25:01,105 - INFO - Model evaluation:
+2024-11-30 01:25:01,105 - INFO - Evaluating the model performance
+2024-11-30 01:25:01,110 - INFO - Saving the trained model to: D:\research_summarizer\models\domain_classifier.pkl
+2024-11-30 01:25:01,113 - INFO - Loading model from: D:\research_summarizer\models\domain_classifier.pkl
+2024-11-30 01:25:01,132 - INFO - Initializing ResearchDomainClassifier
+2024-11-30 01:25:01,135 - INFO - Loading domain keywords from: domain_keywords.json
+2024-11-30 01:25:01,139 - INFO - Predicted Domain for sample text: Neural networks are a core concept in machine learning.
+2024-11-30 01:25:01,140 - INFO - Predicting the domain for given text
