@@ -1,0 +1,270 @@
+2024-11-30 23:41:10,063 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:41:10,766 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:41:11,020 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:41:11,303 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:41:11,991 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:41:12,394 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:41:16,941 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:41:17,115 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:41:17,116 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:41:17,144 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-30 23:41:17,144 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-30 23:41:17,165 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:41:20,658 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:41:20,943 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:41:21,185 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:41:21,436 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:41:21,682 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:41:22,024 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:41:25,770 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:41:25,922 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:41:25,924 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:41:25,983 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:41:25,987 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:42:49,930 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:42:49,934 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:42:50,647 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:42:51,328 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:42:52,022 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:42:52,704 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:42:53,098 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:42:57,568 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:42:57,676 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:42:57,958 - root - INFO - Successfully extracted text from D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:42:58,227 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Abhi\\anaconda3\\Lib\\site-packages\\torch\\distributed\\_functional_collectives.py', reloading
+2024-11-30 23:43:00,830 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:43:05,973 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:43:06,669 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:43:06,909 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:43:07,165 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:43:07,474 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:43:07,856 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:43:12,293 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:43:12,466 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:43:12,466 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:43:12,489 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:43:12,494 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:43:32,457 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:43:32,459 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:43:32,728 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:43:32,966 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:43:33,213 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:43:33,458 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:43:33,860 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:43:35,069 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:43:35,232 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:43:35,382 - root - INFO - Successfully extracted text from D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:43:46,768 - root - DEBUG - Generated summary successfully.
+2024-11-30 23:43:49,582 - root - INFO - Model and tokenizer saved to summarizer.pkl
+2024-11-30 23:43:49,583 - root - INFO - Processing complete.
+2024-11-30 23:43:56,069 - root - DEBUG - Generated summary successfully.
+2024-11-30 23:43:56,071 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:43:56] "POST /summarize HTTP/1.1" 200 -
+2024-11-30 23:44:54,354 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:44:54,355 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:44:56,029 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:45:00,526 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:45:00,780 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:45:01,455 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:45:02,149 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:45:02,388 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:45:02,764 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:45:07,818 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:45:07,972 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:45:07,973 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:45:07,993 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:45:07,996 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:45:08,045 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:45:08,047 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:45:08,343 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:45:08,620 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:45:08,878 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:45:09,119 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:45:09,517 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:45:11,404 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:45:11,572 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:45:11,725 - root - INFO - Successfully extracted text from D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:45:21,639 - root - DEBUG - Generated summary successfully.
+2024-11-30 23:45:21,641 - root - ERROR - Processing failed: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+Traceback (most recent call last):
+  File "D:\Brieflet\src\summary.py", line 192, in main
+    processor.save_to_pickle()  # Save the model and tokenizer to a pickle file
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+2024-11-30 23:45:21,650 - __main__ - ERROR - Processing error: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+Traceback (most recent call last):
+  File "D:\Brieflet\api.py", line 74, in summarize_paper
+    results = process_paper(filepath)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 192, in main
+    processor.save_to_pickle()  # Save the model and tokenizer to a pickle file
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+2024-11-30 23:45:21,659 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:45:21] "[35m[1mPOST /summarize HTTP/1.1[0m" 500 -
+2024-11-30 23:48:21,652 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:48:21,653 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:48:21,654 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:48:23,148 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:48:28,272 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:48:28,976 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:48:29,224 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:48:29,488 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:48:29,770 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:48:29,881 - __main__ - ERROR - Failed to load summarizer: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+2024-11-30 23:48:29,902 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:48:29,905 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:48:38,817 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:48:38,819 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:48:39,106 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:48:39,352 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:48:39,657 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:48:39,904 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:48:40,018 - root - ERROR - Processing failed: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:48:40,024 - __main__ - ERROR - Processing error: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\api.py", line 74, in summarize_paper
+    results = process_paper(filepath)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:48:40,031 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:48:40] "[35m[1mPOST /summarize HTTP/1.1[0m" 500 -
+2024-11-30 23:49:02,157 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:49:02,158 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:49:02,161 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:49:03,597 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:49:07,341 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:49:07,601 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:49:08,277 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:49:08,972 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:49:09,217 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:49:09,577 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:49:12,577 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:49:12,743 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:49:12,744 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:49:12,758 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:49:12,761 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:49:12,799 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:49:12,802 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:49:13,073 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:49:13,741 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:49:13,985 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:49:14,250 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:49:14,596 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:49:15,790 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:49:15,958 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:49:16,106 - root - INFO - Successfully extracted text from D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:49:26,695 - root - DEBUG - Generated summary successfully.
+2024-11-30 23:49:26,696 - root - ERROR - Processing failed: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+Traceback (most recent call last):
+  File "D:\Brieflet\src\summary.py", line 192, in main
+    processor.save_to_pickle()  # Save the model and tokenizer to a pickle file
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+2024-11-30 23:49:26,698 - __main__ - ERROR - Processing error: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+Traceback (most recent call last):
+  File "D:\Brieflet\api.py", line 74, in summarize_paper
+    results = process_paper(filepath)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 192, in main
+    processor.save_to_pickle()  # Save the model and tokenizer to a pickle file
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResearchPaperProcessor' object has no attribute 'save_to_pickle'
+2024-11-30 23:49:26,707 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:49:26] "[35m[1mPOST /summarize HTTP/1.1[0m" 500 -
+2024-11-30 23:50:03,014 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:50:03,015 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:50:04,051 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:50:08,324 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:50:08,582 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:08,835 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:50:09,090 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:09,334 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:50:09,478 - __main__ - ERROR - Failed to load summarizer: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+2024-11-30 23:50:09,491 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:50:09,495 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:50:09,515 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:50:09,517 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:50:09,769 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:10,015 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:50:10,294 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:10,555 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:50:10,658 - root - ERROR - Processing failed: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:50:10,661 - __main__ - ERROR - Processing error: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\api.py", line 74, in summarize_paper
+    results = process_paper(filepath)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:50:10,671 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:50:10] "[35m[1mPOST /summarize HTTP/1.1[0m" 500 -
+2024-11-30 23:50:13,064 - __main__ - INFO - File saved: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-11-30 23:50:13,065 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:50:13,345 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:14,059 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:50:14,309 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:14,551 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:50:14,666 - root - ERROR - Processing failed: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:50:14,669 - __main__ - ERROR - Processing error: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'
+Traceback (most recent call last):
+  File "D:\Brieflet\api.py", line 74, in summarize_paper
+    results = process_paper(filepath)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 169, in main
+    processor = ResearchPaperProcessor(pdf_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Brieflet\src\summary.py", line 42, in __init__
+    self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretained('facebook/bart-large-cnn')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AutoModelForSeq2SeqLM' has no attribute 'from_pretained'. Did you mean: 'from_pretrained'?
+2024-11-30 23:50:14,684 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2024 23:50:14] "[35m[1mPOST /summarize HTTP/1.1[0m" 500 -
+2024-11-30 23:50:28,916 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:50:28,916 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:50:28,917 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:50:30,240 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-30 23:50:34,170 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-11-30 23:50:34,418 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:34,661 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:50:34,915 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/tokenizer_config.json HTTP/11" 404 0
+2024-11-30 23:50:35,163 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/vocab.json HTTP/11" 200 0
+2024-11-30 23:50:35,517 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/config.json HTTP/11" 200 0
+2024-11-30 23:50:38,168 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/bart-large-cnn/resolve/main/generation_config.json HTTP/11" 200 0
+2024-11-30 23:50:38,355 - root - INFO - ResearchPaperProcessor initialized.
+2024-11-30 23:50:38,356 - __main__ - INFO - Summarizer model loaded successfully
+2024-11-30 23:50:38,368 - werkzeug - WARNING -  * Debugger is active!
+2024-11-30 23:50:38,372 - werkzeug - INFO -  * Debugger PIN: 102-611-010
+2024-11-30 23:52:10,991 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:52:10,993 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading
+2024-11-30 23:52:10,994 - werkzeug - INFO -  * Detected change in 'D:\\Brieflet\\src\\summary.py', reloading

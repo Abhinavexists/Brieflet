@@ -2,7 +2,6 @@ import os
 import logging
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
-from models.domain_classifier import ResearchDomainClassifier
 from src.summary import ResearchPaperProcessor, main as process_paper
 
 # Configure logging
@@ -20,14 +19,7 @@ ALLOWED_EXTENSIONS = {'pdf'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Load pre-trained models
-try:
-    domain_classifier = ResearchDomainClassifier(domain_keywords_file='D:\\Brieflet\\models\\domain_keywords.json')
-    logger.info("Domain classifier model loaded successfully")
-except Exception as e:
-    logger.error(f"Failed to load domain classifier: {e}")
-    domain_classifier = None
-
+# Load pre-trained summarizer model
 try:
     paper_processor = ResearchPaperProcessor(pdf_path=None)
     logger.info("Summarizer model loaded successfully")
@@ -40,13 +32,13 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/analyze', methods=['POST'])
-def analyze_paper():
+@app.route('/summarize', methods=['POST'])
+def summarize_paper():
     """
-    Endpoint to analyze a research paper:
+    Endpoint to summarize a research paper:
     1. Upload PDF
-    2. Classify domain
-    3. Generate summary
+    2. Generate summary
+    3. Extract sections
     """
     # Check if file is present
     if 'file' not in request.files:
@@ -81,15 +73,6 @@ def analyze_paper():
         # Process paper
         results = process_paper(filepath)
 
-        # Classify domain (if model is loaded)
-        domain = "Unknown"
-        if domain_classifier:
-            try:
-                domain = domain_classifier.predict(results['sections'].get('abstract', ''))
-                logger.info(f"Domain classified as: {domain}")
-            except Exception as domain_error:
-                logger.error(f"Domain classification failed: {domain_error}")
-
         # Generate summary (if model is loaded)
         if paper_processor:
             summary_result = paper_processor.generate_summary(results['sections'].get('abstract', ''))
@@ -105,7 +88,6 @@ def analyze_paper():
         response = {
             'status': 'success',
             'filename': filename,
-            'domain': domain,
             'sections': results['sections'],
             'summary': results['summary']
         }
@@ -124,9 +106,8 @@ def health_check():
     """Simple health check endpoint."""
     return jsonify({
         'status': 'healthy',
-        'domain_classifier': domain_classifier is not None,
         'summarizer': paper_processor is not None
     }), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

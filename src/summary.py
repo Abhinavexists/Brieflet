@@ -1,14 +1,12 @@
 """
 A module to process research papers and extract summaries and key sections.
 """
-import pickle
 import logging
 import re
 import os
 import PyPDF2
 import nltk
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-
 
 # Configure logging
 LOG_DIR = 'logs'
@@ -23,24 +21,26 @@ logging.basicConfig(
     ]
 )
 
-
 class ResearchPaperProcessor:
     """
     A class to process research papers and extract summaries and key sections.
     """
 
-    def __init__(self, pdf_path):
+    def __init__(self, pdf_path, tokenizer=None, summary_model=None):
         """
         Initialize the ResearchPaperProcessor.
 
         Args:
             pdf_path (str): Path to the research paper PDF.
+            tokenizer (optional): Pre-loaded tokenizer
+            summary_model (optional): Pre-loaded summary model
         """
         self.pdf_path = pdf_path
-        self.tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-cnn')
-        self.summary_model = AutoModelForSeq2SeqLM.from_pretrained(
-            'facebook/bart-large-cnn'
-        )
+        
+        # Use provided models or create new ones
+        self.tokenizer = tokenizer or AutoTokenizer.from_pretrained('facebook/bart-large-cnn')
+        self.summary_model = summary_model or AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-large-cnn')
+        
         logging.info("ResearchPaperProcessor initialized.")
 
     def extract_text_from_pdf(self):
@@ -151,24 +151,6 @@ class ResearchPaperProcessor:
             'summary_length': len(summary.split())
         }
 
-    def save_to_pickle(self, filename="summarizer.pkl"):
-        """
-        Save the tokenizer and summarization model to a pickle file.
-
-        Args:
-            filename (str, optional): File name to save the models. Defaults to "summarizer.pkl".
-        """
-        try:
-            with open(filename, 'wb') as f:
-                pickle.dump({
-                    'tokenizer': self.tokenizer,
-                    'summary_model': self.summary_model
-                }, f)
-            logging.info(f"Model and tokenizer saved to {filename}")
-        except Exception as e:
-            logging.error(f"Failed to save models: {e}")
-            raise
-
 
 def main(pdf_path):
     """
@@ -189,7 +171,7 @@ def main(pdf_path):
         cleaned_text = processor.preprocess_text(full_text)
         sections = processor.extract_key_sections(cleaned_text)
         summary = processor.generate_summary(cleaned_text)
-        processor.save_to_pickle()  # Save the model and tokenizer to a pickle file
+        
         logging.info("Processing complete.")
 
         return {
@@ -202,6 +184,6 @@ def main(pdf_path):
 
 
 if __name__ == "__main__":
-    PDF_PATH = 'D:\\Brieflet\\data\\pdf_files\\Neural Networks from Scratch in Python.pdf'
+    PDF_PATH = 'data/research_paper.pdf'
     RESULTS = main(PDF_PATH)
     print(RESULTS)
