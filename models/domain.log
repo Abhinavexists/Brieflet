@@ -16,3 +16,18 @@
 2024-11-30 01:25:01,135 - INFO - Loading domain keywords from: domain_keywords.json
 2024-11-30 01:25:01,139 - INFO - Predicted Domain for sample text: Neural networks are a core concept in machine learning.
 2024-11-30 01:25:01,140 - INFO - Predicting the domain for given text
+2024-12-01 00:20:24,944 - INFO - Initializing ResearchDomainClassifier
+2024-12-01 00:20:24,944 - INFO - Loading domain keywords from: domain_keywords.json
+2024-12-01 00:20:24,944 - INFO - Preparing dataset from PDF files in directory: D:\research_summarizer\data\pdf_files
+2024-12-01 00:21:52,551 - INFO - Initializing ResearchDomainClassifier
+2024-12-01 00:21:52,552 - INFO - Loading domain keywords from: domain_keywords.json
+2024-12-01 00:21:52,552 - INFO - Preparing dataset from PDF files in directory: D:\Brieflet\data\pdf_files
+2024-12-01 00:21:52,552 - INFO - Extracting text from PDF: D:\Brieflet\data\pdf_files\research_paper.pdf
+2024-12-01 00:21:52,691 - INFO - Assigning domain label for file: research_paper.pdf
+2024-12-01 00:21:52,692 - INFO - Domain 'Artificial Intelligence' assigned based on file content.
+2024-12-01 00:21:52,692 - INFO - Extracting text from PDF: D:\Brieflet\data\pdf_files\research_paper2.pdf
+2024-12-01 00:21:52,830 - INFO - Assigning domain label for file: research_paper2.pdf
+2024-12-01 00:21:52,831 - INFO - Domain 'Artificial Intelligence' assigned based on file content.
+2024-12-01 00:21:52,871 - INFO - Training the classifier
+2024-12-01 00:21:52,874 - INFO - Model evaluation:
+2024-12-01 00:21:52,875 - INFO - Evaluating the model performance

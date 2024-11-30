@@ -166,7 +166,7 @@ if __name__ == "__main__":
     classifier = ResearchDomainClassifier(domain_keywords_file='domain_keywords.json')
 
     # Prepare dataset
-    pdf_directory = 'D:\\research_summarizer\\data\\pdf_files'
+    pdf_directory = 'D:\Brieflet\data\pdf_files'
     X_train, X_test, y_train, y_test = classifier.prepare_dataset(pdf_directory)
 
     # Train model
@@ -176,11 +176,11 @@ if __name__ == "__main__":
     logger.info("Model evaluation:")
     print(classifier.evaluate(X_test, y_test))
 
-    # Save model
-    classifier.save_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
+    # # Save model
+    # classifier.save_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
 
-    # Load and use model
-    loaded_classifier = ResearchDomainClassifier.load_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
-    sample_text = "Neural networks are a core concept in machine learning."
-    logger.info(f"Predicted Domain for sample text: {sample_text}")
-    print(f"Predicted Domain: {loaded_classifier.predict(sample_text)}")
+    # # Load and use model
+    # loaded_classifier = ResearchDomainClassifier.load_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
+    # sample_text = "Neural networks are a core concept in machine learning."
+    # logger.info(f"Predicted Domain for sample text: {sample_text}")
+    # print(f"Predicted Domain: {loaded_classifier.predict(sample_text)}")
