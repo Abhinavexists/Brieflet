@@ -1,54 +1,20 @@
 import os
-import json
-import pickle
-import PyPDF2
 import pandas as pd
-import logging
+import PyPDF2
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
 
-# Check if logger exists, if not create one
-logger = logging.getLogger('ResearchDomainClassifier')
-if not logger.hasHandlers():
-    # Create file handler for logging to domain.log
-    file_handler = logging.FileHandler('domain.log')
-    file_handler.setLevel(logging.INFO)
-    
-    # Create console handler for logging to console
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    
-    # Create formatter and add it to handlers
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    file_handler.setFormatter(formatter)
-    console_handler.setFormatter(formatter)
-    
-    # Add handlers to the logger
-    logger.addHandler(file_handler)
-    logger.addHandler(console_handler)
-    
-    # Set the logging level
-    logger.setLevel(logging.INFO)
 
 class ResearchDomainClassifier:
-    def __init__(self, domain_keywords_file='domain_keywords.json'):
-        """
-        Initialize classifier with domain keywords and models.
-        """
-        logger.info("Initializing ResearchDomainClassifier")
-        # Load domain keywords from JSON file
-        self.domain_keywords = self.load_domain_keywords(domain_keywords_file)
+    def __init__(self):
         self.vectorizer = TfidfVectorizer(stop_words='english')
         self.classifier = MultinomialNB()
 
     @staticmethod
     def pdf_to_text(pdf_path):
-        """
-        Extract text from a PDF file.
-        """
-        logger.info(f"Extracting text from PDF: {pdf_path}")
+        """Extract text from a PDF file."""
         text = ""
         with open(pdf_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
@@ -57,40 +23,38 @@ class ResearchDomainClassifier:
                 text += page.extract_text()
         return text
 
-    def assign_domain_label(self, pdf_file_name, pdf_text):
+    @staticmethod
+    def assign_domain_label(pdf_file_name, pdf_text):
         """
         Assign domain label to a given file based on file name and content.
         """
-        logger.info(f"Assigning domain label for file: {pdf_file_name}")
+        domain_keywords = {
+            # Domain Keywords
+            "Artificial Intelligence": ["AI", "machine learning", "deep learning", "neural network", "natural language processing"],
+            "Biology": ["DNA", "genome", "biochemistry", "microbiology", "protein"],
+            "Physics": ["quantum mechanics", "thermodynamics", "particle physics", "optics"],
+            "Chemistry": ["chemical reaction", "organic chemistry", "biochemistry"],
+            "Mathematics": ["calculus", "algebra", "geometry", "statistics"],
+            "Computer Science": ["programming", "algorithm", "data structure", "cybersecurity"],
+            # Add other domains...
+        }
+
         # Check file name for domain-specific keywords
-        for domain, keywords in self.domain_keywords.items():
+        for domain, keywords in domain_keywords.items():
             if any(keyword.lower() in pdf_file_name.lower() for keyword in keywords):
-                logger.info(f"Domain '{domain}' assigned based on file name.")
                 return domain
 
         # Check text content for domain-specific keywords
-        for domain, keywords in self.domain_keywords.items():
+        for domain, keywords in domain_keywords.items():
             if any(keyword.lower() in pdf_text.lower() for keyword in keywords):
-                logger.info(f"Domain '{domain}' assigned based on file content.")
                 return domain
 
-        logger.warning(f"Domain not found for file: {pdf_file_name}. Assigned 'Unknown'.")
         return "Unknown"
-
-    @staticmethod
-    def load_domain_keywords(json_file):
-        """
-        Load domain keywords from a JSON file.
-        """
-        logger.info(f"Loading domain keywords from: {json_file}")
-        with open(json_file, 'r') as file:
-            return json.load(file)
 
     def prepare_dataset(self, pdf_dir):
         """
         Prepare dataset from PDF files in a directory.
         """
-        logger.info(f"Preparing dataset from PDF files in directory: {pdf_dir}")
         data = []
 
         # Process all PDFs in the directory
@@ -112,75 +76,99 @@ class ResearchDomainClassifier:
         return train_test_split(X, y, test_size=0.2, random_state=42)
 
     def train(self, X_train, y_train):
-        """
-        Train the classifier with the given dataset.
-        """
-        logger.info("Training the classifier")
+        """Train the classifier with the given dataset."""
         self.classifier.fit(X_train, y_train)
 
     def evaluate(self, X_test, y_test):
-        """
-        Evaluate the classifier performance on the test dataset.
-        """
-        logger.info("Evaluating the model performance")
+        """Evaluate the classifier's performance."""
         y_pred = self.classifier.predict(X_test)
         return classification_report(y_test, y_pred)
 
     def predict(self, text):
-        """
-        Predict the domain of a given text.
-        """
-        logger.info("Predicting the domain for given text")
+        """Predict the domain of a given text."""
         vectorized_text = self.vectorizer.transform([text])
         return self.classifier.predict(vectorized_text)[0]
 
-    def save_model(self, output_path):
-        """
-        Save the trained model to a file.
-        """
-        logger.info(f"Saving the trained model to: {output_path}")
-        with open(output_path, 'wb') as f:
-            pickle.dump({
-                'vectorizer': self.vectorizer,
-                'classifier': self.classifier
-            }, f)
-
     @classmethod
     def load_model(cls, model_path):
-        """
-        Load a trained model from a file.
-        """
-        logger.info(f"Loading model from: {model_path}")
-        with open(model_path, 'rb') as f:
-            model_data = pickle.load(f)
-
-        classifier = cls()
-        classifier.vectorizer = model_data['vectorizer']
-        classifier.classifier = model_data['classifier']
-        return classifier
+        # For future use if needed for loading a pre-trained model
+        pass
 
 
-# Example usage
-if __name__ == "__main__":
-    # Initialize classifier with the JSON file containing domain keywords
-    classifier = ResearchDomainClassifier(domain_keywords_file='domain_keywords.json')
+# Flask API Implementation
+from flask import Flask, request, jsonify
 
-    # Prepare dataset
-    pdf_directory = 'D:\Brieflet\data\pdf_files'
+app = Flask(__name__)
+
+# Initialize and train the classifier dynamically
+classifier = ResearchDomainClassifier()
+pdf_directory = 'D:\\research_summarizer\\data\\pdf_files'
+
+# Train the model upon app startup
+try:
     X_train, X_test, y_train, y_test = classifier.prepare_dataset(pdf_directory)
-
-    # Train model
     classifier.train(X_train, y_train)
+    print("Model trained successfully.")
+except Exception as e:
+    print(f"Error training the model: {e}")
 
-    # Evaluate performance
-    logger.info("Model evaluation:")
-    print(classifier.evaluate(X_test, y_test))
 
-    # # Save model
-    # classifier.save_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
+@app.route("/")
+def home():
+    return jsonify({"message": "Research Domain Classifier API is running."})
 
-    # # Load and use model
-    # loaded_classifier = ResearchDomainClassifier.load_model('D:\\research_summarizer\\models\\domain_classifier.pkl')
-    # sample_text = "Neural networks are a core concept in machine learning."
-    # logger.info(f"Predicted Domain for sample text: {sample_text}")
-    # print(f"Predicted Domain: {loaded_classifier.predict(sample_text)}")
+
+@app.route("/classify", methods=["POST"])
+def classify_pdf():
+    """
+    Classify the research domain of a PDF.
+    Expects a PDF file to be uploaded via form-data.
+    """
+    if 'file' not in request.files:
+        return jsonify({"error": "No file provided."}), 400
+
+    pdf_file = request.files['file']
+    if pdf_file.filename == '':
+        return jsonify({"error": "No selected file."}), 400
+
+    if not pdf_file.filename.endswith('.pdf'):
+        return jsonify({"error": "Invalid file format. Only PDF files are supported."}), 400
+
+    try:
+        # Save the uploaded PDF temporarily
+        temp_path = os.path.join("temp", pdf_file.filename)
+        os.makedirs("temp", exist_ok=True)
+        pdf_file.save(temp_path)
+
+        # Extract and classify the PDF text
+        pdf_text = ResearchDomainClassifier.pdf_to_text(temp_path)
+        domain = classifier.predict(pdf_text)
+
+        # Cleanup temp file
+        os.remove(temp_path)
+
+        return jsonify({"domain": domain})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/predict", methods=["POST"])
+def predict_text():
+    """
+    Predict the research domain from text input.
+    Expects JSON with a "text" field.
+    """
+    data = request.get_json()
+    if not data or 'text' not in data:
+        return jsonify({"error": "No text provided."}), 400
+
+    text = data['text']
+    try:
+        domain = classifier.predict(text)
+        return jsonify({"domain": domain})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
