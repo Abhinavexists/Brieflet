@@ -30,14 +30,45 @@ class ResearchDomainClassifier:
         """
         domain_keywords = {
             # Domain Keywords
-            "Artificial Intelligence": ["AI", "machine learning", "deep learning", "neural network", "natural language processing"],
-            "Biology": ["DNA", "genome", "biochemistry", "microbiology", "protein"],
-            "Physics": ["quantum mechanics", "thermodynamics", "particle physics", "optics"],
-            "Chemistry": ["chemical reaction", "organic chemistry", "biochemistry"],
-            "Mathematics": ["calculus", "algebra", "geometry", "statistics"],
-            "Computer Science": ["programming", "algorithm", "data structure", "cybersecurity"],
-            # Add other domains...
+            "Artificial Intelligence": ["AI", "machine learning", "deep learning", "neural network", "natural language processing", "reinforcement learning", "computer vision", "chatbot", "pattern recognition"],
+            "Biology": ["DNA", "genome", "biochemistry", "microbiology", "protein", "genetics", "ecology", "evolution", "immunology", "cell biology", "physiology", "biophysics"],
+            "Physics": ["quantum mechanics", "thermodynamics", "particle physics", "optics", "astrophysics", "electromagnetism", "nuclear physics", "mechanics", "fluid dynamics", "relativity", "condensed matter"],
+            "Chemistry": ["chemical reaction", "organic chemistry", "biochemistry", "inorganic chemistry", "analytical chemistry", "molecular biology", "stoichiometry", "thermochemistry", "reaction kinetics", "materials science"],
+            "Mathematics": ["calculus", "algebra", "geometry", "statistics", "probability", "differential equations", "number theory", "linear algebra", "discrete mathematics", "topology", "mathematical modeling"],
+            "Computer Science": ["programming", "algorithm", "data structure", "cybersecurity", "databases", "software engineering", "networking", "cloud computing", "big data", "artificial intelligence", "machine learning", "operating systems", "computational theory", "data science"],
+            "Engineering": ["mechanical engineering", "civil engineering", "electrical engineering", "chemical engineering", "aerospace engineering", "structural engineering", "electromagnetics", "control systems", "robotics", "manufacturing", "industrial engineering"],
+            "Economics": ["microeconomics", "macroeconomics", "supply and demand", "market equilibrium", "econometrics", "game theory", "international trade", "inflation", "finance", "economic policy", "monetary policy", "economic growth"],
+            "Psychology": ["behaviorism", "cognitive psychology", "neuropsychology", "social psychology", "developmental psychology", "clinical psychology", "personality psychology", "psychopathology", "research methodology", "psychotherapy", "counseling"],
+            "History": ["ancient history", "medieval history", "modern history", "world wars", "historical events", "archaeology", "historical research", "cultural history", "historical analysis", "political history"],
+            "Literature": ["poetry", "novels", "short stories", "drama", "literary analysis", "fiction", "non-fiction", "literary criticism", "classical literature", "modernism", "postmodernism", "mythology"],
+            "Philosophy": ["ethics", "metaphysics", "epistemology", "logic", "philosophy of mind", "philosophy of science", "existentialism", "utilitarianism", "aesthetics", "morality", "political philosophy", "metaphysical realism"],
+            "Medicine": ["anatomy", "pathology", "pharmacology", "neurology", "cardiology", "oncology", "immunology", "surgery", "psychiatry", "clinical research", "epidemiology", "infectious diseases", "preventive medicine", "pediatrics"],
+            "Art": ["painting", "sculpture", "modern art", "renaissance art", "art history", "photography", "visual arts", "art theory", "aesthetic", "artistic movements", "abstract art", "street art", "installation art"],
+            "Sociology": ["social structure", "culture", "society", "social interaction", "urban sociology", "deviance", "social norms", "social psychology", "class", "race and ethnicity", "sociological theory", "globalization", "inequality"],
+            "Environmental Science": ["ecosystem", "climate change", "biodiversity", "conservation", "pollution", "renewable energy", "sustainability", "ecology", "environmental policy", "natural resources", "environmental impact", "waste management"],
+            "Linguistics": ["phonetics", "syntax", "semantics", "morphology", "sociolinguistics", "psycholinguistics", "language acquisition", "phonology", "linguistic theory", "applied linguistics", "language typology", "pragmatics"],
+            "Political Science": ["government", "political theory", "political systems", "public policy", "international relations", "comparative politics", "political parties", "political ideologies", "globalization", "democracy", "political economy"],
+            "Geography": ["physical geography", "human geography", "cartography", "geomorphology", "climate", "urban planning", "geopolitics", "topography", "demographics", "geographical information systems", "spatial analysis"],
+            "Law": ["constitutional law", "criminal law", "civil law", "international law", "human rights", "legal theory", "law enforcement", "jurisprudence", "contracts", "litigation", "intellectual property", "administrative law"],
+            "Business": ["management", "marketing", "finance", "entrepreneurship", "strategy", "operations", "human resources", "organizational behavior", "international business", "leadership", "supply chain management", "business ethics"],
+            "Education": ["curriculum development", "teaching methods", "pedagogy", "educational psychology", "school administration", "distance learning", "educational technology", "special education", "higher education", "learning outcomes"],
+            "Mathematical Finance": ["derivatives", "options pricing", "financial modeling", "portfolio theory", "risk management", "quantitative analysis", "stochastic processes", "financial instruments", "capital markets"],
+            "Anthropology": ["cultural anthropology", "archaeology", "linguistic anthropology", "physical anthropology", "ethnography", "human evolution", "social structure", "ethnology", "primatology"],
+            "Theology": ["Christianity", "Islam", "Judaism", "Buddhism", "philosophy of religion", "sacred texts", "religious studies", "spirituality", "ethics", "comparative religion"],
+            "Statistics": ["probability", "statistical inference", "hypothesis testing", "regression analysis", "data analysis", "Bayesian statistics", "sampling", "statistical modeling", "time series analysis", "biostatistics"],
+            "Agriculture": ["agronomy", "crop science", "soil science", "agricultural economics", "plant breeding", "sustainable agriculture", "agriculture technology", "horticulture", "animal science", "agroforestry"],
+            "Veterinary Science": ["animal health", "veterinary medicine", "zoology", "veterinary pathology", "disease prevention", "animal nutrition", "veterinary surgery", "veterinary diagnostics", "wildlife conservation"],
+            "Music": ["composition", "music theory", "performance", "musical genres", "ethnomusicology", "music history", "conducting", "musical instruments", "orchestration", "audio engineering"],
+            "Architecture": ["urban planning", "building design", "construction", "sustainable architecture", "landscape architecture", "interior design", "architectural theory", "historic preservation", "architectural engineering", "city design"],
+            "Tourism": ["hospitality", "tourism management", "tourism marketing", "tourism economics", "cultural tourism", "eco-tourism", "tourist behavior", "destination management", "travel industry"],
+            "Sports Science": ["exercise physiology", "sports psychology", "kinesiology", "athletic training", "sports medicine", "biomechanics", "sports nutrition", "fitness", "sports performance", "sports injury prevention"],
+            "Cognitive Science": ["cognitive psychology", "neuroscience", "artificial intelligence", "decision-making", "learning", "memory", "perception", "language", "brain-computer interfaces", "neuroplasticity"],
+            "Cryptocurrency": ["blockchain", "bitcoin", "ethereum", "cryptographic security", "digital currency", "distributed ledger", "cryptography", "decentralization", "smart contracts", "mining", "tokenomics"],
+            "Social Work": ["child welfare", "social justice", "community development", "mental health", "family therapy", "counseling", "clinical social work", "social policy", "advocacy", "public health"],
+            "Fashion": ["design", "textiles", "fashion trends", "fashion marketing", "apparel", "costume design", "fashion history", "sustainability", "fashion entrepreneurship", "modeling"],
+            "Film Studies": ["cinema", "film history", "directing", "film theory", "screenwriting", "cinematography", "editing", "sound design", "documentary", "film criticism"]
         }
+
 
         # Check file name for domain-specific keywords
         for domain, keywords in domain_keywords.items():
