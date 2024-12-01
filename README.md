@@ -34,6 +34,7 @@ Brieflet is a powerful tool that streamlines the process of understanding and ex
    import nltk
    nltk.download('punkt')  # Tokenizer models
    nltk.download('stopwords')  # Stopword lists
+   exit()
    ```
 
 4. **Prepare the Environment**:
@@ -51,12 +52,20 @@ Brieflet is a powerful tool that streamlines the process of understanding and ex
    ```
    This will start the Brieflet API server on `http://localhost:5000`.
 
-2. **Analyze a Research Paper**:
+2. **Summarize a Research Paper**:
    You can interact with the API using a tool like Postman or a simple HTML form. Here's an example using cURL:
    ```
    curl -X POST \
      -F 'file=@/path/to/your/research_paper.pdf' \
-     http://localhost:5000/analyze
+     http://localhost:5000/summarize
+   ```
+   
+3. **classify domain in a Research Paper**:
+   You can interact with the API using a tool like Postman or a simple HTML form. Here's an example using cURL:
+   ```
+   curl -X POST \
+     -F 'file=@/path/to/your/research_paper.pdf' \
+     http://localhost:5000/classify
    ```
    Replace `/path/to/your/research_paper.pdf` with the actual path to your PDF file.
 
@@ -88,7 +97,9 @@ brieflet/
 │   ├── logs/
 │   └── _init_.py
 |   └── summary.py
-├── api.py
+├── summary_api.py
+├── domain_api.py
+├── License
 ├── requirements.txt
 └── README.md
 ```
